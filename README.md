@@ -6,3 +6,6 @@ Install MongoDB Community Edition
 
 2.insertOne
 ![img_1.png](img_1.png)
+
+add new one with personal _id
+![img_2.png](img_2.png)

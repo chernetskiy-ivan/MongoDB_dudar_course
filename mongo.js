@@ -15,3 +15,20 @@ db.users.insertOne(
         }
     }
 )
+
+//добавляю еще одного юзера
+db.users.insertOne(
+    {
+        _id: 2,
+        "name":"Pirs",
+        "email":"test@mail.ru",
+        "age":44,
+        "hasCar":false,
+        "favColors":["Черный", "Желтый"],
+        "child": {
+            "name": "Mike",
+            "surname": "Philis",
+            "age": 22
+        }
+    }
+)

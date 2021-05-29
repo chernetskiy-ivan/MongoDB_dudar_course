@@ -32,3 +32,15 @@ db.users.insertOne(
         }
     }
 )
+
+//добавляю юзера без одного старого поля, но с одним новым
+db.users.insertOne(
+    {
+        "name":"Pirs",
+        "email":"test@mail.ru",
+        "age":44,
+        "hasCar":false,
+        "favColors":["Черный", "Желтый"],
+        "password": "1234567"
+    }
+)

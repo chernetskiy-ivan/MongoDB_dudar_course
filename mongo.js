@@ -44,3 +44,23 @@ db.users.insertOne(
         "password": "1234567"
     }
 )
+
+//insertMany()
+db.users.insertMany([
+    {
+        "name":"Обоба",
+        "email":"aboba@mail.ru",
+        "age":29,
+        "hasCar":false,
+        "favColors":["Черный", "Желтый"],
+        "password": "aswe1234567"
+    },
+    {
+        "name":"Василий",
+        "email":"vasi@mail.ru",
+        "age":32,
+        "hasCar":true,
+        "favColors":["Черный", "Желтый"],
+        "password": "1234567btrhtr"
+    }
+])

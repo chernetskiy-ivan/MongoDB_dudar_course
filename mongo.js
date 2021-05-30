@@ -64,3 +64,6 @@ db.users.insertMany([
         "password": "1234567btrhtr"
     }
 ])
+
+//выборка данных из коллекции
+db.users.find({}, {_id: 0}).limit(2)

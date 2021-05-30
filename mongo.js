@@ -76,3 +76,6 @@ db.users.find({},{_id: 0}).sort({age: 1, email: -1})
 
 //фильтруем документы и достаем по первому параметру в методе find
 db.users.find({age: 44},{_id: 0})
+
+//фильтруем или по age или по email
+db.users.find({$or: [{age: 21},{email: "admimn@mail.ru"}]},{_id: 0})

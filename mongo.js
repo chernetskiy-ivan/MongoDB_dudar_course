@@ -82,3 +82,6 @@ db.users.find({$or: [{age: 21},{email: "admimn@mail.ru"}]},{_id: 0})
 
 //сортировка
 db.users.find({$or: [{age: 44},{email: "admimn@mail.ru"}]},{_id: 0}).sort({email: 1})
+
+//выборка на меньше или больше по какому-то критерию $lt и $gt соответсвенно($lte и $gte добавляет еще и =)
+db.users.find({$or: [{age: {$lt: 40}}]},{_id: 0})

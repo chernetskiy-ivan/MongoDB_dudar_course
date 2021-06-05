@@ -88,3 +88,6 @@ db.users.find({$or: [{age: {$lt: 40}}]},{_id: 0})
 
 //достаю данные с определленными именами
 db.users.find({name: {$in: ["Tom", "Обоба"]}}, {_id: 0})
+
+//вывожу объекты с определенными полями
+db.users.find({child: {$exists: true}}, {_id: 0})

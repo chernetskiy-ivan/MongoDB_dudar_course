@@ -106,3 +106,6 @@ db.users.updateOne({age: 32}, {$set: {age: 33}})
 
 //изменяю не первый объект с подходящим параметром, а все
 db.users.updateMany({age: 44}, {$set: {age: 43}})
+
+//замена объекта
+db.users.replaceOne({age: 33}, {name: "Kiril", age: 34, hasCar: 23, password: "234", hasWife: true})

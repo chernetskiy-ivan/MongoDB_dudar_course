@@ -15,3 +15,7 @@ add new one with personal _id
 add a new field, and without old field 
 
 ![img_3.png](img_3.png)
+
+after replace object
+
+![img_4.png](img_4.png)

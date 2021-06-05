@@ -94,3 +94,6 @@ db.users.find({child: {$exists: true}}, {_id: 0})
 
 //достаю объект с полем определенной длинны
 db.users.find({favColors: {$size: 2}}, {_id: 0})
+
+//достаю объект с значением в поле с определенным индексом
+db.users.find({"favColors.1": "Желтый"}, {_id: 0})

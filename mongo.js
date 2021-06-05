@@ -91,3 +91,6 @@ db.users.find({name: {$in: ["Tom", "Обоба"]}}, {_id: 0})
 
 //вывожу объекты с определенными полями
 db.users.find({child: {$exists: true}}, {_id: 0})
+
+//достаю объект с полем определенной длинны
+db.users.find({favColors: {$size: 2}}, {_id: 0})

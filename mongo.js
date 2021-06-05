@@ -112,3 +112,30 @@ db.users.replaceOne({age: 33}, {name: "Kiril", age: 34, hasCar: 23, password: "2
 
 //удаление одного объекта
 db.users.deleteOne({age: 29})
+
+
+//Объединение запросов в БД
+db.users.bulkWrite([
+    {
+        insertOne: {
+            "document": {name: "Mike", age: 45, email: "mike@mail.ru"}
+        }
+    },
+    {
+        deleteOne: {
+            filter: {age: 43}
+        }
+    },
+    {
+        updateOne: {
+            filter: {age: 19},
+            update: {$set: {age: 18, name: "Ivar"}}
+        }
+    },
+    {
+        replaceOne: {
+            filter: {name: "Kiril"},
+            replacement: {name: "Кирилл", age: 33, email: "kiril@mail.ru"}
+        }
+    }
+])

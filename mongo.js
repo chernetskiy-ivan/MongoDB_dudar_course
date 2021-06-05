@@ -109,3 +109,6 @@ db.users.updateMany({age: 44}, {$set: {age: 43}})
 
 //замена объекта
 db.users.replaceOne({age: 33}, {name: "Kiril", age: 34, hasCar: 23, password: "234", hasWife: true})
+
+//удаление одного объекта
+db.users.deleteOne({age: 29})

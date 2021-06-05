@@ -102,5 +102,7 @@ db.users.find({"favColors.1": "Желтый"}, {_id: 0})
 //обновление и удаление данных
 
 //db.users.updateOne({фильтр}, {устанавливаем значение})
-
 db.users.updateOne({age: 32}, {$set: {age: 33}})
+
+//изменяю не первый объект с подходящим параметром, а все
+db.users.updateMany({age: 44}, {$set: {age: 43}})

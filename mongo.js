@@ -97,3 +97,10 @@ db.users.find({favColors: {$size: 2}}, {_id: 0})
 
 //достаю объект с значением в поле с определенным индексом
 db.users.find({"favColors.1": "Желтый"}, {_id: 0})
+
+
+//обновление и удаление данных
+
+//db.users.updateOne({фильтр}, {устанавливаем значение})
+
+db.users.updateOne({age: 32}, {$set: {age: 33}})

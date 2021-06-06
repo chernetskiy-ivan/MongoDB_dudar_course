@@ -164,3 +164,6 @@ db.articles.insertMany([
         "date": new Date('2022-11-11')
     }
 ])
+
+//делаем индексы
+db.articles.createIndex({title: "text", anons: "text", text: "text"})

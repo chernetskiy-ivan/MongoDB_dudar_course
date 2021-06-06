@@ -167,3 +167,6 @@ db.articles.insertMany([
 
 //делаем индексы
 db.articles.createIndex({title: "text", anons: "text", text: "text"})
+
+//пишем новый фильтер 
+db.articles.find({$text: {$search: "жители"}})

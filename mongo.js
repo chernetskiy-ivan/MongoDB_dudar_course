@@ -170,3 +170,9 @@ db.articles.createIndex({title: "text", anons: "text", text: "text"})
 
 //пишем новый фильтер 
 db.articles.find({$text: {$search: "жители"}})
+
+//вывожу документы в соответсвии с максимальной схожестью
+db.articles.find(
+    {$text: {$search: "Открытие кофейни"}},
+    {score: {$meta: "textScore"}}
+).sort({score: {$meta: "textScore"}})

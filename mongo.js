@@ -176,3 +176,6 @@ db.articles.find(
     {$text: {$search: "Открытие кофейни"}},
     {score: {$meta: "textScore"}}
 ).sort({score: {$meta: "textScore"}})
+
+//вывржу колво объектов по параметру
+db.users.count({age: 18})

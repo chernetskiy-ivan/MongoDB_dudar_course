@@ -179,3 +179,5 @@ db.articles.find(
 
 //вывржу колво объектов по параметру
 db.users.count({age: 18})
+
+db.users.distinct("email")
